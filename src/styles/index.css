@@ -339,10 +339,4 @@ footer .social-icons {
     justify-content: space-between;
 }
 
-.social-icons img:nth-child(3){
-    position: relative;
-}
-.social-icons img:nth-child(4){
-    position: absolute;
-    left: 231px;
-}
+

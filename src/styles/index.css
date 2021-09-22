@@ -9,6 +9,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Hyundai Sans Head Office';
+
 }
 
 *,
@@ -164,7 +166,6 @@ blockquote {
 
 .category-title {
     margin-bottom: 10px;
-    margin-left: 10px;
 }
 
 .child-categories {
@@ -233,6 +234,8 @@ blockquote {
     color: var(--primaryColor);
     font-size: 23px;
     font-weight: bold;
+    margin-left: 10px;
+
 }
 
 .cards {
@@ -253,14 +256,93 @@ blockquote {
     background-color: #ffff;
     border: 1.82339px solid rgba(94, 64, 164, 0.18);
     box-shadow: 0px 13.6754px 27.3508px rgba(94, 64, 164, 0.14);
-    height: 229.75px;
+    height: 260px;
 }
 
-.app-group{
+.card-items:last-child {
+    margin-bottom: 40px;
+}
+
+.app-group {
     position: relative;
     min-height: 400px;
 }
 
-.app-group img{
+.app-group img {
     position: absolute;
+}
+
+.icon-group {
+    margin: 17px 0 15px 18px;
+}
+
+.icon-group img:not(:last-child) {
+    margin-right: 5px;
+}
+
+.card-items h3 {
+    color: #444444;
+    font-size: 20px;
+    font-family: inherit;
+    margin-left: 20px;
+}
+
+.feedback-text {
+    padding: 10px 17px;
+    color: #7C7C7C;
+}
+
+.person-feed {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.person-feed img {
+    margin-right: 8px;
+}
+
+.person-feed span {
+    color: #444444;
+    font-weight: bold;
+}
+
+
+footer {
+    padding: 10px 20px 100px 20px;}
+
+footer .app-store-icon {
+    display: block;
+    margin-bottom: 40px;
+}
+
+footer .web-logo {
+    margin-bottom: 30px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+footer .social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social-icons img:nth-child(3){
+    position: relative;
+}
+.social-icons img:nth-child(4){
+    position: absolute;
+    left: 231px;
 }

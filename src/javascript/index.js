@@ -13,3 +13,9 @@ document.querySelectorAll(".btn").forEach((item) => {
     item.style.color = "#240046";
   });
 });
+document.querySelectorAll(".btn-first").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+    item.style.textDecoration = "underline";
+  });
+});

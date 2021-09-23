@@ -7,9 +7,9 @@
 }
 
 * {
+    font-family: 'Hyundai Sans Head Office';
     margin: 0;
     padding: 0;
-    font-family: 'Hyundai Sans Head Office';
 
 }
 
@@ -42,6 +42,14 @@ blockquote {
 }
 
 /* Navbar styling */
+header {
+    background: white;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
 .nav-menu {
     align-items: center;
     display: flex;
@@ -86,8 +94,13 @@ blockquote {
     text-align: center;
 }
 
-.app-container .app-store {
+.app-container .store {
     margin-bottom: 1rem;
+}
+
+.find-friends {
+    display: flex;
+    flex-direction: column;
 }
 
 .app-location {
@@ -140,14 +153,18 @@ blockquote {
     color: #fff;
 }
 
-.find-pet-container h1 {
+.find-pet-container .match {
     color: var(--primaryColor);
     font-family: 'Hyundai Sans Head Office';
     font-size: 3rem;
     font-weight: bold;
-    margin-top: 1rem;
     text-align: center;
 
+}
+
+.find-match {
+    margin-top: 1rem;
+    width: 65vw;
 }
 
 .find-pet-container {
@@ -186,7 +203,7 @@ blockquote {
     font-size: 20px;
     font-weight: 500;
     line-height: 25px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .child-categories p {
@@ -264,12 +281,21 @@ blockquote {
 }
 
 .app-group {
-    position: relative;
     min-height: 400px;
+    position: relative;
 }
 
 .app-group img {
     position: absolute;
+}
+
+.app-group .help {
+    left: 55px;
+}
+
+.app-group .map {
+    right: 0;
+    top: 38px;
 }
 
 .icon-group {
@@ -282,19 +308,19 @@ blockquote {
 
 .card-items h3 {
     color: #444444;
-    font-size: 20px;
     font-family: inherit;
+    font-size: 20px;
     margin-left: 20px;
 }
 
 .feedback-text {
-    padding: 10px 17px;
     color: #7C7C7C;
+    padding: 10px 17px;
 }
 
 .person-feed {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-left: 10px;
 }
 
@@ -309,34 +335,209 @@ blockquote {
 
 
 footer {
-    padding: 10px 20px 100px 20px;}
+    padding: 10px 20px 100px 20px;
+}
 
 footer .app-store-icon {
-    display: block;
-    margin-bottom: 40px;
+    display: none;
+}
+
+.copyright{
+    display: none;
 }
 
 footer .web-logo {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    color: var(--primaryColor);
+    font-size: 26px;
 }
 
-.links {
+.links-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 50px;
 }
 
-.links a {
-    text-decoration: none;
-    font-weight: bold;
+.links-list a {
+    color: var(--primaryColor);
     font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 footer .social-icons {
-    display: flex;
     align-items: center;
+    cursor: pointer;
+    display: flex;
     justify-content: space-between;
 }
 
+.play-store-icon {
+    display: none;
+}
+.group-appstore{
+    margin-bottom: 30px;
+}
 
+.social-link{
+    display: none;
+}
+.social-icon{
+}
+/* ************Media queries************************* */
+
+@media (min-width:64rem) {
+
+    .nav-menu img {
+        width: 100px;
+    }
+
+    .download-app {
+        padding: 30px 0 0 0;
+    }
+
+    .find-friends {
+        margin: 20px 0 100px 0;
+        flex-direction: row;
+    }
+
+    .find-friends .app-store {
+        margin: 0 20px 0 0;
+    }
+
+    .find-friends img {
+        width: 250px;
+    }
+
+    .app-container h1 {
+        font-size: 62px;
+    }
+
+
+
+    .app-group {
+        display: none;
+    }
+
+    .app-location {
+        height: 260px;
+    }
+
+    .add-location {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 40px 0 0 0;
+    }
+
+    .add-location h1 {
+        font-size: 40px;
+    }
+
+    .add-location p {
+        font-size: 22px;
+    }
+
+    .add-location button {
+        font-size: 25px;
+    }
+
+    .location-content {
+        margin-top: 10px;
+    }
+
+    .find-pet-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .find-match {
+        width: auto;
+    }
+
+    .items {
+        margin-left: 10px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .cat-feed {
+        margin-left: 20px;
+    }
+
+    .child-categories {
+        margin-bottom: 0;
+    }
+
+    .child-categories p {
+        margin-bottom: 1rem;
+        font-size: 18px;
+    }
+
+    .child-categories h1 {
+        font-size: 24px;
+        margin-bottom: 22px
+    }
+
+    .learn-more {
+        font-size: 18px
+    }
+
+    .categories {
+        margin-bottom: 50px;
+    }
+
+    .see-all {
+        margin-right: 10px;
+    }
+
+    .links .btn {
+        color: white;
+    }
+
+    footer {
+        background: var(--primaryColor);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .web-logo {
+        margin-bottom: 25px;
+        color: white;
+        font-size: 32px;
+    }
+
+    footer .app-store-icon {
+        display: inline;
+        margin: 0 15px 0 0;
+    }
+
+    .app-container .store {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+
+    .play-store-icon {
+        display: inline-block;
+    }
+
+    .group-appstore{
+        display: none;
+    }
+
+    .social-link{
+        display: block;
+    }
+
+    .social-icon{
+        display: none;
+    }
+
+    footer {
+        padding: 42px 20px 100px 20px;
+    }
+}

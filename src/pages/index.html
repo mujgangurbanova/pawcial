@@ -17,16 +17,51 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
   <body>
     <header>
-      <nav>
-        <div class="nav-menu">
-          <img src="../assets/images/logo.svg" alt="website-logo" />
-          <div class="hamburger-menu">
+      <nav class="nav-menu">
+        <div class="nav-lists">
+          <h1>Pawcial</h1>
+          <a class="list-link"href="#!">About us</a>
+          <a class="list-link" href="#!">Help</a>
+          <a class="list-link" href="#!">Privacy</a>
+          <a class="list-link" href="#!">Add Location</a>
+          <div class="hamburger-menu" onclick="openNav()">
             <span></span>
             <span></span>
             <span></span>
+          </div>
+          <div id="mySidenav" class="sidenav">
+            <a " href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a  class="sidenav-link" href="#">About us</a>
+            <a class="sidenav-link" href="#">Help</a>
+            <a class="sidenav-link" href="#">Privacy</a>
+            <a class="sidenav-link" href="#">Add Location</a>
+          </div>
+        </div>
+        <div class="language">
+          <div class="dropdown single">
+            <div class="dropdown__content">
+              <div class="dropdown__content-selected">en</div>
+              <div class="dropdown__content-icon">
+                <img class = "chevron"src="../assets/images/chevron.png" alt="Chevron down" />
+              </div>
+            </div>
+            <div class="dropdown__container">
+              <ul>
+                <li>ru</li>
+                <li>az</li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -46,6 +81,7 @@
               alt="download on the play store"
             />
           </div>
+          <img class="mob-app" src="../assets/images/app-group.png" alt="" />
         </div>
         <div class="app-group">
           <img
@@ -59,7 +95,6 @@
             alt="Help"
           />
           <img class="map" src="../assets/images/map 1.png" alt="map" />
-          <!-- <img src="../assets/images/app-group.png" alt=""> -->
         </div>
       </div>
       <section class="app-location">
@@ -73,14 +108,14 @@
       </section>
       <section class="find-pet-wrapper">
         <div class="find-pet-container">
-          <div>
+          <div class="title-match">
             <h1 class="find-match match">Find best match</h1>
             <span class="pet-matcher match">for your pet</span>
           </div>
-          <img src="../assets/images/pet.png" alt="Pet find" />
+          <img class = "dog" src="../assets/images/pet.png" alt="Pet find" />
         </div>
       </section>
-      <h1 class="category-title cat-feed">Categories</h1>
+      <span class="category-title cat-feed">Categories</span>
       <section class="categories cards">
         <div class="child-categories items">
           <img src="../assets/images/help tag.png" alt="help tag" />
@@ -121,140 +156,196 @@
           <h1 class="feedback-title cat-feed">Feedback</h1>
           <a class="see-all btn" href="">See all</a>
         </div>
-        <div class="feedback-cards cards">
-          <div class="card-items items">
-            <div class="icon-group">
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati2.png" />
+        <div class="swiper mySwiper">
+          <div class="feedback-cards cards swiper-wrapper">
+
+            <div class="card-items items swiper-slide">
+              <div class="icon-group">
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati2.png" />
+              </div>
+              <h3>Great app, feed flaws.</h3>
+              <div class="feedback-text">
+                <p>
+                  Overall, Instagram is an excellent social media app. However, I
+                  have found a few flaws in the way Instagram looks. For example,
+                  the comments are not in chronological
+                </p>
+              </div>
+              <div class="person-feed">
+                <img src="../assets/images/ellipse.png" alt="person picture" />
+                <span>Leila Agayeva</span>
+              </div>
             </div>
-            <h3>Great app, feed flaws.</h3>
-            <div class="feedback-text">
-              <p>
-                Overall, Instagram is an excellent social media app. However, I
-                have found a few flaws in the way Instagram looks. For example,
-                the comments are not in chronological
-              </p>
+            <div class="card-items items swiper-slide">
+              <div class="icon-group">
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati2.png" />
+              </div>
+              <h3>Great app, feed flaws.</h3>
+              <div class="feedback-text">
+                <p>
+                  Overall, Instagram is an excellent social media app. However, I
+                  have found a few flaws in the way Instagram looks. For example,
+                  the comments are not in chronological
+                </p>
+              </div>
+              <div class="person-feed">
+                <img src="../assets/images/ellipse.png" alt="person picture" />
+                <span>Leila Agayeva</span>
+              </div>
             </div>
-            <div class="person-feed">
-              <img src="../assets/images/ellipse.png" alt="person picture" />
-              <span>Leila Agayeva</span>
+            <div class="card-items items swiper-slide">
+              <div class="icon-group">
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati2.png" />
+              </div>
+              <h3>Great app, feed flaws.</h3>
+              <div class="feedback-text">
+                <p>
+                  Overall, Instagram is an excellent social media app. However, I
+                  have found a few flaws in the way Instagram looks. For example,
+                  the comments are not in chronological
+                </p>
+              </div>
+              <div class="person-feed">
+                <img src="../assets/images/ellipse.png" alt="person picture" />
+                <span>Leila Agayeva</span>
+              </div>
+            </div>
+            <div class="card-items items swiper-slide">
+              <div class="icon-group">
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati2.png" />
+              </div>
+              <h3>Great app, feed flaws.</h3>
+              <div class="feedback-text">
+                <p>
+                  Overall, Instagram is an excellent social media app. However, I
+                  have found a few flaws in the way Instagram looks. For example,
+                  the comments are not in chronological
+                </p>
+              </div>
+              <div class="person-feed">
+                <img src="../assets/images/ellipse.png" alt="person picture" />
+                <span>Leila Agayeva</span>
+              </div>
+            </div>
+            <div class="card-items items swiper-slide">
+              <div class="icon-group">
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati.png" />
+                <img src="../assets/images/pati2.png" />
+              </div>
+              <h3>Great app, feed flaws.</h3>
+              <div class="feedback-text">
+                <p>
+                  Overall, Instagram is an excellent social media app. However, I
+                  have found a few flaws in the way Instagram looks. For example,
+                  the comments are not in chronological
+                </p>
+              </div>
+              <div class="person-feed">
+                <img src="../assets/images/ellipse.png" alt="person picture" />
+                <span>Leila Agayeva</span>
+              </div>
             </div>
           </div>
-          <div class="card-items items">
-            <div class="icon-group">
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati2.png" />
-            </div>
-            <h3>Great app, feed flaws.</h3>
-            <div class="feedback-text">
-              <p>
-                Overall, Instagram is an excellent social media app. However, I
-                have found a few flaws in the way Instagram looks. For example,
-                the comments are not in chronological
-              </p>
-            </div>
-            <div class="person-feed">
-              <img src="../assets/images/ellipse.png" alt="person picture" />
-              <span>Leila Agayeva</span>
-            </div>
-          </div>
-          <div class="card-items items">
-            <div class="icon-group">
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati.png" />
-              <img src="../assets/images/pati2.png" />
-            </div>
-            <h3>Great app, feed flaws.</h3>
-            <div class="feedback-text">
-              <p>
-                Overall, Instagram is an excellent social media app. However, I
-                have found a few flaws in the way Instagram looks. For example,
-                the comments are not in chronological
-              </p>
-            </div>
-            <div class="person-feed">
-              <img src="../assets/images/ellipse.png" alt="person picture" />
-              <span>Leila Agayeva</span>
-            </div>
-          </div>
+          
         </div>
       </section>
+      <footer>
+        <div class="footer-content">
+          <div class="logo-group">
+            <h1 class="web-logo">Pawcial</h1>
+            <img
+              class="group-appstore"
+              src="../assets/images/group-appstore.png"
+            />
+            <img
+              class="app-store-icon store"
+              src="../assets/images/footer-appstore.png"
+              alt="download on the app store"
+            />
+            <img
+              class="play-store-icon store"
+              src="../assets/images/footer-playstore.png"
+              alt="download on the app store"
+            />
+            <p class="copyright">&copy 2021 Pawcial</p>
+          </div>
+          <div class="links">
+            <div class="links-list">
+              <a class="btn-first btn" href="">About us</a>
+              <a class="btn-first btn" href="">Help</a>
+              <a class="btn-first btn" href="">Privacy</a>
+              <a class="btn-first btn" href="">Location</a>
+            </div>
+            <div class="social-icons">
+              <img
+                class="social-icon"
+                src="../assets/images/la-fb.png"
+                alt="facebook"
+              />
+              <img
+                class="social-icon"
+                src="../assets/images/la-instagram.png"
+                alt="instagram"
+              />
+              <img
+                class="social-icon"
+                src="../assets/images/jam_twitter-square.png"
+                alt="twitter"
+              />
+              <img
+                class="social-icon"
+                src="../assets/images/la_linkedin.png"
+                alt="linkedin"
+              />
+              <img
+                class="social-link"
+                src="../assets/images/facebook.png"
+                alt="facebook"
+              />
+              <img
+                class="social-link"
+                src="../assets/images/instagram.png"
+                alt="Instagram"
+              />
+              <img
+                class="social-link"
+                src="../assets/images/twt.svg "
+                alt="twitter"
+              />
+              <img
+                class="social-link"
+                src="../assets/images/linkedin.png"
+                alt="linkedin"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
-    <footer>
-      <div class="logo-group">
-        <h1 class="web-logo">Pawcial</h1>
-        <img class="group-appstore" src="../assets/images/group-appstore.png" />
-        <img
-          class="app-store-icon store"
-          src="../assets/images/footer-appstore.png"
-          alt="download on the app store"
-        />
-        <img
-          class="play-store-icon store"
-          src="../assets/images/footer-playstore.png"
-          alt="download on the app store"
-        />
-        <p class="copyright">&copy 2021 Pawcial</p>
-      </div>
-      <div class="links">
-        <div class="links-list">
-          <a class="btn-first btn" href="">About us</a>
-          <a class="btn-first btn" href="">Help</a>
-          <a class="btn-first btn" href="">Privacy</a>
-          <a class="btn-first btn" href="">Location</a>
-        </div>
-        <div class="social-icons">
-          <img
-            class="social-icon"
-            src="../assets/images/la-fb.png"
-            alt="facebook"
-          />
-          <img
-            class="social-icon"
-            src="../assets/images/la-instagram.png"
-            alt="instagram"
-          />
-          <img
-            class="social-icon"
-            src="../assets/images/jam_twitter-square.png"
-            alt="twitter"
-          />
-          <img
-            class="social-icon"
-            src="../assets/images/la_linkedin.png"
-            alt="linkedin"
-          />
-          <img
-            class="social-link"
-            src="../assets/images/facebook.png"
-            alt="facebook"
-          />
-          <img
-            class="social-link"
-            src="../assets/images/instagram.png"
-            alt="Instagram"
-          />
-          <img
-            class="social-link"
-            src="../assets/images/twt.svg "
-            alt="twitter"
-          />
-          <img
-            class="social-link"
-            src="../assets/images/linkedin.png"
-            alt="linkedin"
-          />
-        </div>
-      </div>
-    </footer>
+   
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="../javascript/index.js"></script>
+
   </body>
 </html>
+
+

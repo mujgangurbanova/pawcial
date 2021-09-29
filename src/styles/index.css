@@ -21,10 +21,8 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 1rem;
 }
-
-
 
 h1,
 h2,
@@ -45,25 +43,29 @@ blockquote {
 
 /* Navbar styling */
 .sidenav {
+    background-color: var(--primaryColor);
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #faf9f9;
     overflow-x: hidden;
+    padding-top: 3.75rem;
+    position: fixed;
+    right: 0;
+    top: 0;
     transition: 0.5s;
-    padding-top: 60px;
+    width: 0;
+    z-index: 1;
+}
+
+.side-links{
+    padding: 30px;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 25px;
-    color: #575757;
+    color: #efefef;
     display: block;
+    font-size: 2rem;
+    padding: .5rem .5rem .5rem 2rem;
+    text-align: center;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -72,22 +74,22 @@ blockquote {
 }
 
 .sidenav .closebtn {
+    font-size: 2.25rem;
+    margin-left: 3.125rem;
     position: absolute;
+    right: .64rem;
     top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
 }
 
 
 header {
     background: white;
-    height: 70px;
+    height: 4.375rem;
+    margin: 0 auto;
+    max-width: 87.5rem;
     position: sticky;
     top: 0px;
     z-index: 999;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .nav-menu {
@@ -118,9 +120,10 @@ header {
     width: 1.375rem;
 }
 
+/*********************************/
 .app-wrapper {
-    max-width: 1400px;
     margin: 0 auto;
+    max-width: 87.5rem;
 }
 
 
@@ -153,7 +156,7 @@ header {
 
 .app-location {
     background-color: var(--primaryColor);
-    height: 176px;
+    height: 11rem;
 }
 
 .add-location {
@@ -166,20 +169,20 @@ header {
 .add-location h1 {
     color: white;
     font-family: 'Hyundai Sans Head Office';
-    font-size: 25px;
-    line-height: 25px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    font-size: 1.5625rem;
+    line-height: 1.5625rem;
+    margin-bottom: 0.625rem;
+    margin-top: 1.25rem;
 }
 
 .add-location p {
     color: white;
     font-family: 'Hyundai Sans Head  Office';
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: normal;
-    line-height: 15px;
-    margin-bottom: 30px;
+    line-height: 0.9375rem;
+    margin-bottom: 1.875rem;
     text-align: center;
 }
 
@@ -192,7 +195,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: 600;
-    padding: 15px 40px;
+    padding: 0.9375rem 2.5rem;
     transition: .2s ease-in;
 }
 
@@ -201,6 +204,7 @@ header {
     color: #fff;
 }
 
+/*********************************/
 .find-pet-container .match {
     color: var(--primaryColor);
     font-family: 'Hyundai Sans Head Office';
@@ -228,9 +232,9 @@ header {
 
 }
 
-
+/*********************************/
 .category-title {
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .cat-feed {
@@ -239,7 +243,7 @@ header {
 
 .child-categories {
     background-color: var(--primaryColor);
-    height: 244px;
+    height: 15.25rem;
     position: relative;
 }
 
@@ -252,10 +256,10 @@ header {
 .child-categories h1 {
     color: white;
     font-family: 'Hyundai Sans Head Office';
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 25px;
-    margin-bottom: 20px;
+    line-height: 1.5625rem;
+    margin-bottom: 1.25rem;
 }
 
 .child-categories p {
@@ -276,12 +280,12 @@ header {
 }
 
 .categories-information {
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 
 .feedback {
-    padding: 10px 9px;
+    padding: 0.625rem 9px;
 }
 
 .feedback-header {
@@ -301,33 +305,33 @@ header {
 
 .cat-feed {
     color: var(--primaryColor);
-    font-size: 23px;
+    font-size: 1.4375rem;
     font-weight: bold;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 
 }
 
 .cards {
     display: flex;
     flex-direction: column;
-    padding: 10px 9px;
+    padding: 0.625rem 9px;
 
 }
 
 .items {
     border-radius: 9px;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     width: 100%;
 
 }
 
 .card-items {
     background-color: #ffff;
-    border: 1.82339px solid rgba(94, 64, 164, 0.18);
+    border: 1.8232.4375rem solid rgba(94, 64, 164, 0.18);
     box-shadow: 0px 13.6754px 27.3508px rgba(94, 64, 164, 0.14);
-    height: 260px;
-    width: 100%;
     display: none;
+    height: 16.25rem;
+    width: 100%;
 }
 
 
@@ -338,11 +342,11 @@ header {
 }
 
 .card-items:last-child {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .app-group {
-    min-height: 400px;
+    min-height: 25rem;
     position: relative;
 }
 
@@ -351,16 +355,16 @@ header {
 }
 
 .app-group .help {
-    left: 48px;
+    left: 3rem;
 }
 
 .app-group .map {
     right: 0;
-    top: 38px;
+    top: 2.375rem;
 }
 
 .icon-group {
-    margin: 17px 0 15px 18px;
+    margin: 17px 0 0.9375rem 1.125rem;
 }
 
 .icon-group img:not(:last-child) {
@@ -370,19 +374,19 @@ header {
 .card-items h3 {
     color: #444444;
     font-family: inherit;
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 1.25rem;
+    margin-left: 1.25rem;
 }
 
 .feedback-text {
     color: #7C7C7C;
-    padding: 10px 17px;
+    padding: 0.625rem 17px;
 }
 
 .person-feed {
     align-items: center;
     display: flex;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 .person-feed img {
@@ -394,9 +398,9 @@ header {
     font-weight: bold;
 }
 
-
+/*********************************/
 .footer-content {
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 footer .app-store-icon {
@@ -409,15 +413,15 @@ footer .app-store-icon {
 
 footer .web-logo {
     color: var(--primaryColor);
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 1.625rem;
+    margin-bottom: 1.5625rem;
 }
 
 .links-list {
     display: grid;
-    gap: 30px;
+    gap: 1.875rem;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 }
 
 .links-list a {
@@ -439,7 +443,7 @@ footer .social-icons {
 }
 
 .group-appstore {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .social-link {
@@ -459,14 +463,14 @@ footer .social-icons {
 }
 
 .nav-lists {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     height: 100%;
+    justify-content: space-between;
 }
 
 .swiper-wrapper .swiper-slide {
-    height: 260px;
+    height: 16.25rem;
 }
 
 
@@ -485,24 +489,24 @@ footer .social-icons {
 @media screen and (min-width:20rem) {
     .app-group .sign-up {
         top: 9px;
-        width: 146px;
+        width: 9.125rem;
     }
 
     .app-group .map {
         right: 0;
-        top: 44px;
-        width: 135px;
+        top: 2.75rem;
+        width: 8.4375rem;
     }
 
     .app-group .help {
-        left: 53px;
-        top: 18px;
-        width: 216px;
+        left: 3.3125rem;
+        top: 1.125rem;
+        width: 13.5rem;
 
     }
 
     .app-location {
-        height: 200px;
+        height: 12.5rem;
     }
 
     .app-location h1 {
@@ -523,15 +527,15 @@ footer .social-icons {
 @media screen and (min-width:22.5rem) {
     .app-group .map {
         right: 0;
-        top: 27px;
+        top: 1.6875rem;
     }
 
     .app-group .sign-up {
-        top: 22px;
+        top: 1.375rem;
     }
 
     .app-group .help {
-        left: 67px;
+        left: 4.1875rem;
         top: 6px;
     }
 
@@ -543,7 +547,7 @@ footer .social-icons {
 
 @media screen and (min-width:25.875rem) {
     .app-group .help {
-        left: 68px;
+        left: 4.25rem;
     }
 
     .app-container h1 {
@@ -562,25 +566,25 @@ footer .social-icons {
 
 @media screen and (min-width:37.5rem) {
     .app-group .sign-up {
-        width: 210px;
         top: 8px;
+        width: 13.125rem;
     }
 
     .app-group .help {
-        width: 300px;
-        left: 142px;
+        left: 8.875rem;
+        width: 18.75rem;
     }
 
     .app-group .map {
-        width: 190px;
         right: 0;
-        top: 39px;
+        top: 2.4375rem;
+        width: 11.875rem;
     }
 }
 
 @media screen and (min-width:48rem) {
     header {
-        margin-bottom: 30px;
+        margin-bottom: 1.875rem;
     }
 
     .app-group {
@@ -593,31 +597,31 @@ footer .social-icons {
 
     .find-friends {
         flex-direction: row;
-        margin-bottom: 60px;
+        margin-bottom: 3.75rem;
     }
 
     .app-container .store {
         margin-bottom: 0;
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     .add-location p {
-        font-size: 18px;
+        font-size: 1.125rem;
         text-align: center;
     }
 
     .add-location h1 {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 
     .add-location button {
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .find-pet-container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 0 0 0 40px;
+        padding: 0 0 0 2.5rem;
     }
 
     .find-match {
@@ -637,7 +641,7 @@ footer .social-icons {
     }
 
     .child-categories:nth-child(1) {
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     .child-categories:nth-child(3) {
@@ -649,31 +653,31 @@ footer .social-icons {
     }
 
     .social-icon:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 }
 
 @media screen and (min-width:64rem) {
 
     .download-app {
-        padding: 30px 0 0 0;
+        padding: 1.875rem 0 0 0;
     }
 
     .find-friends {
         flex-direction: row;
-        margin: 20px 0 100px 0;
+        margin: 1.25rem 0 6.25rem 0;
     }
 
     .find-friends .app-store {
-        margin: 0 20px 0 0;
+        margin: 0 1.25rem 0 0;
     }
 
     .find-friends img {
-        width: 250px;
+        width: 15.625rem;
     }
 
     .app-container h1 {
-        font-size: 62px;
+        font-size: 3.5rem;
     }
 
 
@@ -683,41 +687,41 @@ footer .social-icons {
     }
 
     .app-location {
-        height: 260px;
+        height: 16.25rem;
     }
 
     .add-location {
         align-items: center;
         flex-direction: row;
         justify-content: space-between;
-        padding: 40px 40px 0 40px;
+        padding: 2.5rem 2.5rem 0 2.5rem;
     }
 
     .add-location h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     .add-location p {
-        font-size: 22px;
+        font-size: 1.375rem;
         text-align: left;
     }
 
     .add-location button {
-        font-size: 25px;
+        font-size: 1.5625rem;
     }
 
     .location-content {
-        margin-top: 10px;
+        margin-top: 0.625rem;
     }
 
     .find-pet-container {
         flex-direction: row;
         justify-content: space-between;
-        padding: 40px 40px 0 40px;
+        padding: 2.5rem 2.5rem 0 2.5rem;
     }
 
     .find-pet-container .match {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .find-match {
@@ -725,7 +729,7 @@ footer .social-icons {
     }
 
     .items {
-        margin-left: 10px;
+        margin-left: 0.625rem;
     }
 
     .feedback-cards {
@@ -733,7 +737,7 @@ footer .social-icons {
     }
 
     .cat-feed {
-        margin-left: 20px;
+        margin-left: 1.25rem;
     }
 
     .child-categories {
@@ -742,26 +746,26 @@ footer .social-icons {
     }
 
     .child-categories p {
-        font-size: 18px;
+        font-size: 1.125rem;
         margin-bottom: 1rem;
     }
 
     .child-categories h1 {
-        font-size: 24px;
-        margin-bottom: 22px;
+        font-size: 1.5rem;
+        margin-bottom: 1.375rem;
     }
 
     .learn-more {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 
     .categories {
         flex-direction: row;
-        margin-bottom: 50px;
+        margin-bottom: 3.125rem;
     }
 
     .see-all {
-        margin-right: 10px;
+        margin-right: 0.625rem;
     }
 
     .links .btn {
@@ -770,22 +774,24 @@ footer .social-icons {
 
     footer {
         background: var(--primaryColor);
+        margin: 0 auto;
+        width: calc(100% - 2.5rem);
     }
 
     footer .web-logo {
         color: white;
-        font-size: 32px;
-        margin-bottom: 25px;
+        font-size: 2rem;
+        margin-bottom: 1.5625rem;
     }
 
     footer .app-store-icon {
         display: inline;
-        margin: 0 15px 0 0;
+        margin: 0 0.9375rem 0 0;
     }
 
     .app-container .store {
         margin-bottom: 0;
-        margin-right: 15px;
+        margin-right: 0.9375rem;
     }
 
     .play-store-icon {
@@ -812,7 +818,7 @@ footer .social-icons {
 
 
     .links-list .btn-first {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     .categories {
@@ -820,10 +826,6 @@ footer .social-icons {
         flex-wrap: nowrap;
 
     }
-
-    /* .child-categories {
-        width: 100%;
-    } */
 
     .child-categories:nth-child(1) {
         flex: 1;
@@ -844,13 +846,13 @@ footer .social-icons {
 
     .footer-content {
         display: grid;
-        gap: 90px;
+        gap: 5.625rem;
         grid-template-columns: 1fr 1fr;
     }
 
     .links-list {
         margin-left: 2rem;
-        row-gap: 20px;
+        row-gap: 1.25rem;
     }
 
 }
@@ -868,7 +870,7 @@ footer .social-icons {
     .nav-lists a {
         color: #575757;
         cursor: pointer;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 500;
         position: relative;
         text-decoration: none;
@@ -895,11 +897,11 @@ footer .social-icons {
     }
 
     .nav-lists a:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     .nav-lists h1 {
-        margin-right: 50px;
+        margin-right: 3.125rem;
     }
 
     .language {
@@ -943,24 +945,24 @@ footer .social-icons {
     }
 
     .mob-app {
-        display: block;
-        position: absolute;
-        z-index: -1;
         bottom: 0;
-        right: 70px;
-        width: 680px;
-        height: 500px;
+        display: block;
+        height: 31.25rem;
+        position: absolute;
+        right: 4.375rem;
+        width: 42.5rem;
+        z-index: -1;
     }
 
 
 
     .find-friends {
-        margin: 20px 0 100px 30px;
+        margin: 1.25rem 0 6.25rem 1.875rem;
     }
 
     .app-container h1 {
+        margin-left: 1.875rem;
         text-align: left;
-        margin-left: 30px;
     }
 
     header {
@@ -977,10 +979,10 @@ footer .social-icons {
     }
 
     .copyright {
-        display: block;
         color: white;
-        margin-top: 20px;
-        font-size: 20px;
+        display: block;
+        font-size: 1.25rem;
+        margin-top: 1.25rem;
     }
 
     .links-list {
@@ -993,21 +995,21 @@ footer .social-icons {
     }
 
     .social-link:not(:last-child) {
-        margin-right: 20px;
+        margin-right: 1.25rem;
     }
 
     .add-location {
         justify-content: space-between;
-        padding: 40px 40px 0 40px;
+        padding: 2.5rem 2.5rem 0 2.5rem;
     }
 
     .find-pet-container {
         justify-content: space-between;
-        padding: 0 40px;
+        padding: 0 2.5rem;
     }
 
     .footer-content {
-        padding: 40px;
+        padding: 2.5rem;
     }
 
     .swiper-wrapper .swiper-slide {
@@ -1015,7 +1017,7 @@ footer .social-icons {
     }
 
     .swiper-slide:hover {
-        transform: scale(1.04);
+        transform: scale(1.05);
         z-index: 1;
 
 
@@ -1030,20 +1032,21 @@ footer .social-icons {
     }
 
     .dropdown__container {
-        display: none;
-        max-height: 100px;
-        width: 100%;
-        padding: 5px;
-        border-radius: 3px;
         background-color: #fff;
         border: 1px solid #efefef;
+        border-radius: 3px;
+        display: none;
+        max-height: 6.25rem;
+        padding: 5px;
         position: absolute;
         top: 100%;
+        width: 100%;
     }
 
     .dropdown__container ul {
         list-style: none;
     }
+
     .dropdown__container li {
         text-align: center;
     }
@@ -1053,31 +1056,22 @@ footer .social-icons {
         background-color: #efefef;
     }
 
-   .show{
-       display: block;
-   }
+    .show {
+        display: block;
+    }
 
-   .chevron{
-       transform: rotate(0deg);
-   }
+    .chevron {
+        transform: rotate(0deg);
+    }
 
-   .rotate180{
-       transform: rotate(180deg);
-   }
+    .rotate180 {
+        transform: rotate(180deg);
+    }
 
 }
 
-
-
-
-
-
-
-
-
-
 @media screen and (max-width:60rem) {
-    .swiper-slide{
+    .swiper-slide {
         width: 100% !important;
     }
 
@@ -1089,5 +1083,3 @@ footer .social-icons {
         display: inherit;
     }
 }
-
-

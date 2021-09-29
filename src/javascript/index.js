@@ -1,9 +1,9 @@
-let locationBtn = document.querySelector(".add-location-btn");
-let learnMore = document.querySelectorAll(".btn");
-let linkList = document.querySelectorAll(".list-link");
-let dropdownIcon = document.querySelector(".chevron");
-let dropdownContainer = document.querySelector(".dropdown__container");
-let language = document.querySelector(".language");
+const locationBtn = document.querySelector(".add-location-btn");
+const learnMore = document.querySelectorAll(".btn");
+const linkList = document.querySelectorAll(".list-link");
+const dropdownIcon = document.querySelector(".chevron");
+const dropdownContainer = document.querySelector(".dropdown__container");
+const language = document.querySelector(".language");
 
 locationBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -46,7 +46,7 @@ document.querySelectorAll(".sidenav-link").forEach((item) => {
   });
 });
 
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
 });
 
@@ -61,26 +61,49 @@ window.addEventListener("scroll", () => {
   const findPetMatcher = document.querySelector(".title-match");
   const dog = document.querySelector(".dog");
   const categoryInformation = document.querySelectorAll(".items");
-  const footerContent = document.querySelector(".social-icons");
+  const socialIcons = document.querySelector(".social-icons");
+  const footerContent = document.querySelector(".footer-content");
+  const appLocation = document.querySelector('.app-location')
 
   const elementTop = element.getBoundingClientRect().top;
 
   const viewportHeight = window.innerHeight;
 
-  if (elementTop + 200 < viewportHeight) {
+  if (elementTop < viewportHeight) {
     element.classList.add("animate__animated", "animate__fadeIn");
-    element.style.setProperty("--animate-duration", "0.5s");
-    addLocation.classList.add("animate__animated", "animate__shakeY");
+    element.style.setProperty("--animate-duration", "2s");
+    addLocation.classList.add("animate__animated", "animate__backInDown");
     addLocation.style.setProperty("--animate-duration", "1s");
-    findPetMatcher.classList.add("animate__animated", "animate__shakeX");
+    findPetMatcher.classList.add("animate__animated", "animate__backInLeft");
     findPetMatcher.style.setProperty("--animate-duration", "1s");
     dog.classList.add("animate__animated", "animate__fadeIn");
     dog.style.setProperty("--animate-duration", "1s");
-    footerContent.classList.add("animate__animated", "animate__fadeIn");
-    footerContent.style.setProperty("--animate-duration", "6s");
+    socialIcons.classList.add("animate__animated", "animate__fadeIn");
+    socialIcons.style.setProperty("--animate-duration", "6s");
     categoryInformation.forEach((item) => {
-      item.classList.add("animate__animated", "animate__fadeIn");
+      item.classList.add("animate__animated", "animate__backInUp");
       item.style.setProperty("--animate-duration", "3s");
     });
+    appLocation.classList.add("animate__animated", "animate__backInLeft");
+    footerContent.classList.add("animate__animated", "animate__fadeInTopLeft");
+    footerContent.style.setProperty("--animate-duration", "4s");
   }
 });
+
+// const startQueries = () => {
+//   let newQuery = window.matchMedia("(min-width: 320px) and (max-width: 1024px)");
+//   if (newQuery.matches) {
+//     const mySwiper = document.querySelector('.mySwiper')
+//     const feedCards = document.querySelector('.feedback-cards')
+//     const cardItems = document.querySelectorAll('.card-items')
+//     mySwiper.classList.remove('swiper')
+//     feedCards.classList.remove('swiper-wrapper')
+//     cardItems.forEach((item)=>{
+//       item.classList.remove('swiper-slide')
+//     })
+//   }else{
+//     return;
+//   }
+// };
+
+// startQueries();

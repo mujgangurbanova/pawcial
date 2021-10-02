@@ -1,10 +1,22 @@
+//*Variables
 const locationBtn = document.querySelector(".add-location-btn");
 const learnMore = document.querySelectorAll(".btn");
 const linkList = document.querySelectorAll(".list-link");
 const dropdownIcon = document.querySelector(".chevron");
 const dropdownContainer = document.querySelector(".dropdown__container");
 const language = document.querySelector(".language");
+const element = document.querySelector(".app-container");
+const addLocation = document.querySelector(".add-location");
+const findPetMatcher = document.querySelector(".title-match");
+const dog = document.querySelector(".dog");
+const categoryInformation = document.querySelectorAll(".child-categories");
+const cardItems = document.querySelectorAll(".card-items");
+const footerContent = document.querySelector(".footer-content");
+const appGroup = document.querySelector(".app-group");
+let slider = document.querySelector(".slider");
+let innerSlider = document.querySelector(".slider-inner");
 
+//* Click design
 locationBtn.addEventListener("click", (e) => {
   e.preventDefault();
   locationBtn.style.color = "#fff";
@@ -46,64 +58,161 @@ document.querySelectorAll(".sidenav-link").forEach((item) => {
   });
 });
 
-let swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
-});
-
+//*Dropdown
 language.addEventListener("click", () => {
   dropdownContainer.classList.toggle("show");
   dropdownIcon.classList.toggle("rotate180");
 });
 
-window.addEventListener("scroll", () => {
-  const element = document.querySelector(".app-container");
-  const addLocation = document.querySelector(".add-location");
-  const findPetMatcher = document.querySelector(".title-match");
-  const dog = document.querySelector(".dog");
-  const categoryInformation = document.querySelectorAll(".items");
-  const socialIcons = document.querySelector(".social-icons");
-  const footerContent = document.querySelector(".footer-content");
-  const appLocation = document.querySelector('.app-location')
+//*Animations
+//*****1*/
+const observer1 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__fadeIn");
+      element.style.setProperty("--animate-duration", "2s");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__fadeIn");
+    }
+  });
+};
 
-  const elementTop = element.getBoundingClientRect().top;
+const myObserver = new IntersectionObserver(observer1);
+myObserver.observe(element);
+//*****2*/
+const observer2 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__fadeInUp");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__fadeInUp");
+    }
+  });
+};
 
-  const viewportHeight = window.innerHeight;
+const myObserver2 = new IntersectionObserver(observer2);
+myObserver2.observe(addLocation);
 
-  if (elementTop < viewportHeight) {
-    element.classList.add("animate__animated", "animate__fadeIn");
-    element.style.setProperty("--animate-duration", "2s");
-    addLocation.classList.add("animate__animated", "animate__backInDown");
-    addLocation.style.setProperty("--animate-duration", "1s");
-    findPetMatcher.classList.add("animate__animated", "animate__backInLeft");
-    findPetMatcher.style.setProperty("--animate-duration", "1s");
-    dog.classList.add("animate__animated", "animate__fadeIn");
-    dog.style.setProperty("--animate-duration", "1s");
-    socialIcons.classList.add("animate__animated", "animate__fadeIn");
-    socialIcons.style.setProperty("--animate-duration", "6s");
-    categoryInformation.forEach((item) => {
-      item.classList.add("animate__animated", "animate__backInUp");
-      item.style.setProperty("--animate-duration", "3s");
-    });
-    appLocation.classList.add("animate__animated", "animate__backInLeft");
-    footerContent.classList.add("animate__animated", "animate__fadeInTopLeft");
-    footerContent.style.setProperty("--animate-duration", "4s");
-  }
+//****3*/
+const observer3 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__swing");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__swing");
+    }
+  });
+};
+
+const myObserver3 = new IntersectionObserver(observer3);
+myObserver3.observe(findPetMatcher);
+
+//*****4*/
+const observer4 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__swing");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__swing");
+    }
+  });
+};
+
+const myObserver4 = new IntersectionObserver(observer4);
+myObserver4.observe(dog);
+
+//***5*/
+const observer5 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__fadeIn");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__fadeIn");
+    }
+  });
+};
+
+const myObserver5 = new IntersectionObserver(observer5);
+categoryInformation.forEach((item) => {
+  myObserver5.observe(item);
 });
 
-// const startQueries = () => {
-//   let newQuery = window.matchMedia("(min-width: 320px) and (max-width: 1024px)");
-//   if (newQuery.matches) {
-//     const mySwiper = document.querySelector('.mySwiper')
-//     const feedCards = document.querySelector('.feedback-cards')
-//     const cardItems = document.querySelectorAll('.card-items')
-//     mySwiper.classList.remove('swiper')
-//     feedCards.classList.remove('swiper-wrapper')
-//     cardItems.forEach((item)=>{
-//       item.classList.remove('swiper-slide')
-//     })
-//   }else{
-//     return;
-//   }
-// };
+//***6*/
+const observer6 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__fadeIn");
+    } else {
+      entry.target.classList.remove(
+        "animate__animated",
+        "animate__fadeIn"
+      );
+    }
+  });
+};
 
-// startQueries();
+const myObserver6 = new IntersectionObserver(observer6);
+cardItems.forEach((item) => {
+  myObserver6.observe(item);
+});
+
+//***7*/
+const observer7 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__slideInLeft");
+    } else {
+      entry.target.classList.remove(
+        "animate__animated",
+        "animate__slideInLeft"
+      );
+    }
+  });
+};
+
+const myObserver7 = new IntersectionObserver(observer7);
+myObserver7.observe(footerContent);
+
+//***8*/
+const observer8 = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate__animated", "animate__slideInUp");
+    } else {
+      entry.target.classList.remove("animate__animated", "animate__slideInUp");
+    }
+  });
+};
+
+const myObserver8 = new IntersectionObserver(observer8);
+myObserver8.observe(appGroup);
+
+let swiper = new Swiper(".swiper", {
+  slidesPerView: 3,
+  spaceBetween:20,
+  breakpoints: {
+    320:{
+      cssMode: true,
+      direction: 'vertical',
+      
+    },
+    768:{
+      cssMode: true,
+      direction: 'vertical',
+      
+    },
+    1024:{
+      direction: 'horizontal',
+      cssMode: true,
+      
+      
+    },
+    1280: {
+      grabCursor: true,
+      mouseWheel: true,
+      cssMode: false,
+      direction: 'horizontal',
+    },
+  },
+});
+

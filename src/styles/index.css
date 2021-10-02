@@ -10,6 +10,7 @@
     font-family: 'Hyundai Sans Head Office';
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 
 }
 
@@ -18,6 +19,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
+
 }
 
 html {
@@ -55,7 +57,7 @@ blockquote {
     z-index: 1;
 }
 
-.side-links{
+.side-links {
     padding: 30px;
 }
 
@@ -312,6 +314,7 @@ header {
 }
 
 .cards {
+    align-items: center;
     display: flex;
     flex-direction: column;
     padding: 0.625rem 9px;
@@ -321,7 +324,6 @@ header {
 .items {
     border-radius: 9px;
     margin-bottom: 1.25rem;
-    width: 100%;
 
 }
 
@@ -330,8 +332,7 @@ header {
     border: 1.8232.4375rem solid rgba(94, 64, 164, 0.18);
     box-shadow: 0px 13.6754px 27.3508px rgba(94, 64, 164, 0.14);
     display: none;
-    height: 16.25rem;
-    width: 100%;
+    height: 16.25rem !important;
 }
 
 
@@ -469,9 +470,10 @@ footer .social-icons {
     justify-content: space-between;
 }
 
-.swiper-wrapper .swiper-slide {
-    height: 16.25rem;
-}
+/* .swiper-wrapper {
+    flex-direction: column;
+    align-items: center;
+} */
 
 
 
@@ -479,9 +481,7 @@ footer .social-icons {
     color: #ffdab9;
 }
 
-.swiper-wrapper {
-    flex-direction: column;
-}
+
 
 
 /* ************Media queries************************* */
@@ -732,8 +732,8 @@ footer .social-icons {
         margin-left: 0.625rem;
     }
 
-    .feedback-cards {
-        flex-direction: row;
+    .cards {
+        flex-direction: row !important;
     }
 
     .cat-feed {
@@ -858,6 +858,11 @@ footer .social-icons {
 }
 
 @media screen and (min-width:80rem) {
+
+   
+
+    
+
     .hamburger-menu {
         display: none;
     }
@@ -1012,24 +1017,10 @@ footer .social-icons {
         padding: 2.5rem;
     }
 
-    .swiper-wrapper .swiper-slide {
-        transition: 250ms all;
-    }
-
-    .swiper-slide:hover {
-        transform: scale(1.05);
-        z-index: 1;
-
-
-    }
-
     .card-items:nth-of-type(n) {
         display: block;
     }
 
-    .swiper-wrapper {
-        flex-direction: row;
-    }
 
     .dropdown__container {
         background-color: #fff;
@@ -1068,15 +1059,12 @@ footer .social-icons {
         transform: rotate(180deg);
     }
 
-}
-
-@media screen and (max-width:60rem) {
-    .swiper-slide {
-        width: 100% !important;
+    .swiper-slide:hover {
+        transform: scale(1.03) !important;
     }
-
-
 }
+
+
 
 @media screen and (max-width:80rem) {
     .nav-menu {

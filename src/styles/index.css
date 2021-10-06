@@ -1,47 +1,6 @@
 /* Global Styles */
-:root {
-    --primaryColor: #5E40A4;
-    --hoverColor: #cbc0d3;
-
-
-}
-
-* {
-    font-family: 'Hyundai Sans Head Office';
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-
-}
-
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-
-}
-
-html {
-    font-size: 1rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-button,
-input,
-blockquote {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
+@import url(./colors.css);
+@import url(./global.css);
 
 /* Navbar styling */
 .sidenav {
@@ -58,11 +17,11 @@ blockquote {
 }
 
 .side-links {
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 .sidenav a {
-    color: #efefef;
+    color: var(--lightWhite);
     display: block;
     font-size: 2rem;
     padding: .5rem .5rem .5rem 2rem;
@@ -85,12 +44,12 @@ blockquote {
 
 
 header {
-    background: white;
+    background: var(--white);
     height: 4.375rem;
     margin: 0 auto;
     max-width: 87.5rem;
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: 999;
 }
 
@@ -118,7 +77,7 @@ header {
     background: var(--primaryColor);
     border-radius: 0.125rem;
     height: .2rem;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
     width: 1.375rem;
 }
 
@@ -169,7 +128,7 @@ header {
 }
 
 .add-location h1 {
-    color: white;
+    color: var(--white);
     font-family: 'Hyundai Sans Head Office';
     font-size: 1.5625rem;
     line-height: 1.5625rem;
@@ -178,7 +137,7 @@ header {
 }
 
 .add-location p {
-    color: white;
+    color: var(--white);
     font-family: 'Hyundai Sans Head  Office';
     font-size: 1rem;
     font-style: normal;
@@ -189,9 +148,9 @@ header {
 }
 
 .add-location button {
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid transparent;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     color: var(--primaryColor);
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
@@ -203,7 +162,7 @@ header {
 
 .add-location button:hover {
     background-color: var(--hoverColor);
-    color: #fff;
+    color: var(--white);
 }
 
 /*********************************/
@@ -252,11 +211,11 @@ header {
 .child-categories img {
     position: absolute;
     right: 1rem;
-    top: -6px;
+    top: -0.375rem;
 }
 
 .child-categories h1 {
-    color: white;
+    color: var(--white);
     font-family: 'Hyundai Sans Head Office';
     font-size: 1.25rem;
     font-weight: 500;
@@ -270,7 +229,7 @@ header {
 }
 
 .btn {
-    color: #fff;
+    color: var(--white);
     cursor: pointer;
     font-size: 1rem;
     text-decoration: underline;
@@ -287,7 +246,7 @@ header {
 
 
 .feedback {
-    padding: 0.625rem 9px;
+    padding: 0.625rem 0.5625rem;
 }
 
 .feedback-header {
@@ -302,7 +261,7 @@ header {
 }
 
 .see-all:hover {
-    color: #c77dff;
+    color: var(--purple);
 }
 
 .cat-feed {
@@ -317,18 +276,18 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: 0.625rem 9px;
+    padding: 0.625rem 0.5625rem;
 
 }
 
 .items {
-    border-radius: 9px;
+    border-radius: 0.5625rem;
     margin-bottom: 1.25rem;
 
 }
 
 .card-items {
-    background-color: #ffff;
+    background-color: var(--white);
     border: 1.8232.4375rem solid rgba(94, 64, 164, 0.18);
     box-shadow: 0px 13.6754px 27.3508px rgba(94, 64, 164, 0.14);
     display: none;
@@ -349,6 +308,8 @@ header {
 .app-group {
     min-height: 25rem;
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .app-group img {
@@ -365,23 +326,23 @@ header {
 }
 
 .icon-group {
-    margin: 17px 0 0.9375rem 1.125rem;
+    margin: 1.0625rem 0 0.9375rem 1.125rem;
 }
 
 .icon-group img:not(:last-child) {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
 }
 
 .card-items h3 {
-    color: #444444;
+    color: var(--black);
     font-family: inherit;
     font-size: 1.25rem;
     margin-left: 1.25rem;
 }
 
 .feedback-text {
-    color: #7C7C7C;
-    padding: 0.625rem 17px;
+    color: var(--grey);
+    padding: 0.625rem 1.0625rem;
 }
 
 .person-feed {
@@ -391,11 +352,11 @@ header {
 }
 
 .person-feed img {
-    margin-right: 8px;
+    margin-right: 0.5rem;
 }
 
 .person-feed span {
-    color: #444444;
+    color: var(--black);
     font-weight: bold;
 }
 
@@ -470,25 +431,20 @@ footer .social-icons {
     justify-content: space-between;
 }
 
-/* .swiper-wrapper {
-    flex-direction: column;
-    align-items: center;
-} */
-
-
-
 .links-list .btn-first:hover {
-    color: #ffdab9;
+    color: var(--pink);
 }
 
-
+.scrollToTop{
+    display: none;
+}
 
 
 /* ************Media queries************************* */
 
 @media screen and (min-width:20rem) {
     .app-group .sign-up {
-        top: 9px;
+        top: 0.5625rem;
         width: 9.125rem;
     }
 
@@ -536,7 +492,7 @@ footer .social-icons {
 
     .app-group .help {
         left: 4.1875rem;
-        top: 6px;
+        top: 0.375rem;
     }
 
     .find-match {
@@ -566,7 +522,7 @@ footer .social-icons {
 
 @media screen and (min-width:37.5rem) {
     .app-group .sign-up {
-        top: 8px;
+        top: 0.5rem;
         width: 13.125rem;
     }
 
@@ -769,17 +725,15 @@ footer .social-icons {
     }
 
     .links .btn {
-        color: white;
+        color: var(--white);
     }
 
     footer {
         background: var(--primaryColor);
-        margin: 0 auto;
-        width: calc(100% - 2.5rem);
     }
 
     footer .web-logo {
-        color: white;
+        color: var(--white);
         font-size: 2rem;
         margin-bottom: 1.5625rem;
     }
@@ -859,10 +813,6 @@ footer .social-icons {
 
 @media screen and (min-width:80rem) {
 
-   
-
-    
-
     .hamburger-menu {
         display: none;
     }
@@ -873,7 +823,7 @@ footer .social-icons {
     }
 
     .nav-lists a {
-        color: #575757;
+        color: var(--lightBlack);
         cursor: pointer;
         font-size: 1.25rem;
         font-weight: 500;
@@ -883,7 +833,7 @@ footer .social-icons {
 
     .nav-lists a::after {
         background-color: var(--primaryColor);
-        bottom: -5px;
+        bottom: -0.3125rem;
         content: "";
         height: 1px;
         left: 0;
@@ -923,7 +873,7 @@ footer .social-icons {
     }
 
     .dropdown.single {
-        padding: 12px;
+        padding: 0.75rem;
     }
 
     .dropdown__content {
@@ -984,7 +934,7 @@ footer .social-icons {
     }
 
     .copyright {
-        color: white;
+        color: var(--white);
         display: block;
         font-size: 1.25rem;
         margin-top: 1.25rem;
@@ -997,6 +947,8 @@ footer .social-icons {
 
     footer .social-icons {
         justify-content: flex-start;
+        width: fit-content;
+
     }
 
     .social-link:not(:last-child) {
@@ -1023,12 +975,12 @@ footer .social-icons {
 
 
     .dropdown__container {
-        background-color: #fff;
-        border: 1px solid #efefef;
-        border-radius: 3px;
+        background-color: var(--white);
+        border: 1px solid var(--lightWhite);
+        border-radius: 0.1875rem;
         display: none;
         max-height: 6.25rem;
-        padding: 5px;
+        padding: 0.3125rem;
         position: absolute;
         top: 100%;
         width: 100%;
@@ -1044,7 +996,7 @@ footer .social-icons {
 
 
     .dropdown__container li:hover {
-        background-color: #efefef;
+        background-color: var(--lightWhite);
     }
 
     .show {
@@ -1062,8 +1014,28 @@ footer .social-icons {
     .swiper-slide:hover {
         transform: scale(1.03) !important;
     }
-}
 
+    .scrollToTop {
+        position: fixed;
+        display: block;
+        right: 3rem;
+        padding: 0.5rem 0.25rem;
+        border: 1px solid var(--primaryColor);
+        z-index: 55;
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--primaryColor);
+        background-color: var(--white);
+        transform: translateY(50px);
+        opacity: 0;
+        transition: transform 0.5s, opacity 0.5s;
+    }
+
+    .showScrollToTop {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 @media screen and (max-width:80rem) {

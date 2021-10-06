@@ -1,4 +1,5 @@
 //*Variables
+const feedBack = document.querySelector('.feedback')
 const locationBtn = document.querySelector(".add-location-btn");
 const learnMore = document.querySelectorAll(".btn");
 const linkList = document.querySelectorAll(".list-link");
@@ -187,6 +188,42 @@ const observer8 = (entries) => {
 const myObserver8 = new IntersectionObserver(observer8);
 myObserver8.observe(appGroup);
 
+const scrollToTop = document.querySelector(".scrollToTop")
+
+const bottomToTop = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      scrollToTop.style.bottom = "3rem"
+      scrollToTop.classList.add("showScrollToTop")
+    } else {
+      if (scrollToTop.classList.contains("showScrollToTop") && entry.boundingClientRect.y > 0) {
+        scrollToTop.classList.remove("showScrollToTop")
+        scrollToTop.addEventListener("transitionend", removeScrollFromView)
+      }
+    }
+  })
+})
+
+function removeScrollFromView() {
+  scrollToTop.removeEventListener("transitionend", removeScrollFromView)
+  if (scrollToTop.classList.contains("showScrollToTop")) return;
+  scrollToTop.style.bottom = "30px"
+}
+
+bottomToTop.observe(feedBack)
+
+scrollToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  })
+})
+
+
+
+
+
+//*Slider
 let swiper = new Swiper(".swiper", {
   slidesPerView: 3,
   spaceBetween:20,

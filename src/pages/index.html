@@ -31,10 +31,10 @@
       <nav class="nav-menu">
         <div class="nav-lists">
           <h1>Pawcial</h1>
-          <a class="list-link"href="#!">About us</a>
-          <a class="list-link" href="#!">Help</a>
-          <a class="list-link" href="#!">Privacy</a>
-          <a class="list-link" href="#!">Add Location</a>
+          <a class="list-link tab"href="#about">About us</a>
+          <a class="list-link tab" href="#help">Help</a>
+          <a class="list-link tab" href="#privacy">Privacy</a>
+          <a class="list-link tab" href="#location">Add Location</a>
           <div class="hamburger-menu" onclick="openNav()">
             <span></span>
             <span></span>
@@ -43,11 +43,11 @@
           <div id="mySidenav" class="sidenav">
             <a " href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="side-links">
-
-              <a  class="sidenav-link" href="#">About us</a>
-              <a class="sidenav-link" href="#">Help</a>
-              <a class="sidenav-link" href="#">Privacy</a>
-              <a class="sidenav-link" href="#">Add Location</a>
+              
+              <a  class="sidenav-link tab" href="#about">About us</a>
+              <a class="sidenav-link tab" href="#help">Help</a>
+              <a class="sidenav-link tab" href="#privacy">Privacy</a>
+              <a class="sidenav-link tab" href="#location">Add Location</a>
             </div>
           </div>
         </div>
@@ -68,6 +68,9 @@
           </div>
         </div>
       </nav>
+      <label class="overlay">
+  
+      </label>
     </header>
     <section class="app-wrapper">
       <div class="download-app">
@@ -100,7 +103,7 @@
           <img class="map" src="../assets/images/map 1.png" alt="map" />
         </div>
       </div>
-      <section class="app-location">
+      <section class="app-location page" id="about">
         <div class="add-location">
           <div class="location-content">
             <h1>Your location on Pawcial map</h1>
@@ -119,7 +122,7 @@
         </div>
       </section>
       <span class="category-title cat-feed">Categories</span>
-      <section class="categories cards">
+      <section class="categories cards page" id="help">
         <div class="child-categories items">
           <img src="../assets/images/help tag.png" alt="help tag" />
           <div class="categories-information">
@@ -154,7 +157,7 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback page" id="privacy">
         <div class="feedback-header">
           <h1 class="feedback-title cat-feed">Feedback</h1>
           <a class="see-all btn" href="">See all</a>
@@ -271,7 +274,7 @@
         </div>
       </section>
       <button class="scrollToTop">TOP</button>
-      <footer>
+      <footer class="page" id="location">
         <div class="footer-content">
           <div class="logo-group">
             <h1 class="web-logo">Pawcial</h1>
@@ -294,10 +297,10 @@
           </div>
           <div class="links">
             <div class="links-list">
-              <a class="btn-first btn" href="">About us</a>
-              <a class="btn-first btn" href="">Help</a>
-              <a class="btn-first btn" href="">Privacy</a>
-              <a class="btn-first btn" href="">Location</a>
+              <a class="btn-first btn tab" href="#about">About us</a>
+              <a class="btn-first btn tab" href="#help">Help</a>
+              <a class="btn-first btn tab" href="#privacy">Privacy</a>
+              <a class="btn-first btn tab" href="#location">Location</a>
             </div>
             <div class="social-icons">
               <img

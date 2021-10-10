@@ -16,6 +16,7 @@ const footerContent = document.querySelector(".footer-content");
 const appGroup = document.querySelector(".app-group");
 let slider = document.querySelector(".slider");
 let innerSlider = document.querySelector(".slider-inner");
+const overlay = document.querySelector('.overlay')
 
 //* Click design
 locationBtn.addEventListener("click", (e) => {
@@ -44,12 +45,19 @@ document.querySelectorAll(".list-link").forEach((item) => {
 
 //*Hamburger button
 function openNav() {
-  document.getElementById("mySidenav").style.width = "100%";
+  document.getElementById("mySidenav").style.width = "375px";
+  document.getElementById("mySidenav").style.opacity = "1";
+  document.getElementById("mySidenav").style.visibility = "visible";
+  overlay.style.position = "fixed";
   window.scrollTo(0, 0);
 }
 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("mySidenav").style.opacity = "0";
+  document.getElementById("mySidenav").style.visibility = "hidden";
+  overlay.style.position = "initial";
+
 }
 
 document.querySelectorAll(".sidenav-link").forEach((item) => {
@@ -252,4 +260,5 @@ let swiper = new Swiper(".swiper", {
     },
   },
 });
+
 

@@ -11,9 +11,18 @@
     position: fixed;
     right: 0;
     top: 0;
-    transition: 0.5s;
+    transition: all 0.45s;
     width: 0;
     z-index: 1;
+}
+
+.overlay{
+    position: initial;
+    inset: 0;
+    transition: opacity 0.3s ease 0s;
+    opacity: 1;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .side-links {

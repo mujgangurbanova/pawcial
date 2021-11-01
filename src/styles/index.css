@@ -16,7 +16,7 @@
     z-index: 1;
 }
 
-.overlay{
+.overlay {
     position: initial;
     inset: 0;
     transition: opacity 0.3s ease 0s;
@@ -403,6 +403,7 @@ footer .web-logo {
 }
 
 footer .social-icons {
+    position: relative;
     align-items: center;
     cursor: pointer;
     display: flex;
@@ -444,7 +445,7 @@ footer .social-icons {
     color: var(--pink);
 }
 
-.scrollToTop{
+.scrollToTop {
     display: none;
 }
 
@@ -638,14 +639,12 @@ footer .social-icons {
     }
 
     .find-friends img {
-        width: 15.625rem;
+        width: 12.625rem;
     }
 
     .app-container h1 {
         font-size: 3.5rem;
     }
-
-
 
     .app-group {
         display: none;
@@ -733,6 +732,7 @@ footer .social-icons {
         margin-right: 0.625rem;
     }
 
+    
     .links .btn {
         color: var(--white);
     }

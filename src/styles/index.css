@@ -1052,3 +1052,9 @@ footer .social-icons {
         display: inherit;
     }
 }
+@media screen and (min-width:87.5rem) {
+    .scrollToTop{
+        display: none;
+    }
+    
+}

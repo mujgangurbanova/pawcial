@@ -121,36 +121,4 @@ const observer1 = (entries) => {
   const myObserver8 = new IntersectionObserver(observer8);
   myObserver8.observe(appGroup);
   
-  //**********Scroll to top animation */
-  const scrollToTop = document.querySelector(".scrollToTop")
-  
-  const bottomToTop = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        scrollToTop.style.bottom = "3rem"
-        scrollToTop.classList.add("showScrollToTop")
-      } else {
-        if (scrollToTop.classList.contains("showScrollToTop") && entry.boundingClientRect.y > 0) {
-          scrollToTop.classList.remove("showScrollToTop")
-          scrollToTop.addEventListener("transitionend", removeScrollFromView)
-        }
-      }
-    })
-  })
-  
-  function removeScrollFromView() {
-    scrollToTop.removeEventListener("transitionend", removeScrollFromView)
-    if (scrollToTop.classList.contains("showScrollToTop")) return;
-    scrollToTop.style.bottom = "30px"
-  }
-  
-  bottomToTop.observe(feedBack)
-  
-  scrollToTop.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    })
-  })
-  
   
